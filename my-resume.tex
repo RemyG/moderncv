@@ -1,0 +1,161 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{149.60005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}
+
+% personal data
+\name{Rémy}{Gardette}
+\title{Développeur Java Senior}
+\address{Tourcoing, France}
+\email{remy.gardette@gmail.com}
+\homepage{remyg.fr}
+
+% Social icons
+\social[linkedin]{remygardette}
+\social[github]{remyg}
+
+
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+
+\section{Expériences professionnelles}
+
+\cventry{Depuis 2020}{Développeur Java, Lead Dev}{\textit{Kiabi pour SFEIR}}{Lille}{FR}{
+Au sein de l'équipe Archi Web :
+\begin{itemize}
+\item Développement d'un écosystème de microservices pour remplacer l'ESB et l'application monolithique existants
+\item Intégration de la nouvelle marketplace, en mettant en place le raccordement au fournisseur de solution (Marjory)
+\item Migration cloud des microservices, afin de les déployer sur un cluster GKE
+\item Partage de bonnes pratiques, clean code, rédaction d'ADR
+\end{itemize}
+Environnement technique : Java, Spring Boot, PostgreSQL, Kafka, Docker, Kubernetes, GCP.
+}
+
+\cventry{2019--2020}{Développeur Java}{\textit{Leroy Merlin pour SFEIR}}{Lille}{FR}{
+Pour l’équipe API Leroy Merlin France, développement d’APIs REST privées et publiques.
+\begin{itemize}
+\item Evolutions et maintenance des APIs core existantes
+\item Migration technique des APIs depuis une stack Spring, RPM déployés sur VM vers Spring Boot 2, Docker, OpenShift
+\item Optimisation de performances
+\end{itemize}
+Environnement technique : Java 8, Spring Boot, MongoDB, ElasticSearch, Git, Docker, GitlabCI.
+}
+
+\cventry{2017--2019}{Développeur Java, Tech Lead}{\textit{Leroy Merlin pour SFEIR}}{Lille}{FR}{
+Pour le pôle publication du site web Leroy Merlin, dans l’équipe Produits puis dans l’équipe Services, réalisation d'évolutions sur le site "historique", et participation au lancement du replatforming du site monolithique en micro-applications.
+\begin{itemize}
+\item Refactoring complet de la gestion des prix des produits 
+\item Réalisation du back-end de la nouvelle fiche Produit 3.0
+\item Lead technique pour l’équipe Services
+\end{itemize}
+Environnement technique : Java 8, Spring / Spring Boot, PostGreSQL, Git, Docker.
+}
+
+\cventry{2014--2017}{Développeur Java, Tech Lead}{\textit{IBM Client Innovation Center}}{Lille}{FR}{
+Encadrement technique d'équipes et participation aux développement sur des projets Java :
+\begin{itemize}
+\item projet \textit{URights} : portail de perception et répartition des droits d'auteurs
+\item projet \textit{CrossLogbook} : dématérialisation des carnets de bord pour la maintenance d'avions
+\end{itemize}
+Environnement technique : Java, Spring, JPA, webservices, Swing, DBUnit, DB2, Oracle, Maven.
+}
+
+%------------------------------------------------
+
+\cventry{2012--2014}{Développeur Java}{\textit{Multicom Products Ltd }}{Bristol}{UK}{
+Développement et maintenance de l'application coeur de métier \textit{FindAndBook} dédiée aux recherches et achats de vacances et billets d'avion (services SOAP, webscraping).
+\newline{}
+Environnement technique : Java, Spring, Apache HttpClient, Axis2, Maven, Git.
+}
+
+%------------------------------------------------
+
+\cventry{2009--2012}{Développeur Java et PHP}{\textit{Alten}}{Lyon}{FR}{
+Conception et réalisation d'applications Java et PHP :
+\begin{itemize}
+\item plateforme d'envois de campagnes d'information par SMS, mails et courriers papier
+\item portail recrutement du site internet Alten
+\item site interne de gestion des achats pour Alten Sud-Ouest
+\end{itemize}
+Environnement technique Java : Java, GWT, Hibernate, Oracle, Tomcat.
+\newline{}
+Environnement technique PHP : PHP, MySQL, PostGreSQL, Apache HTTPD.
+}
+
+\section{Certifications}
+
+\cvitem{2016}{Oracle Certified Professional, Java SE 7 Programmer}
+\cvitem{2015}{Oracle Certified Associate, Java SE 7 Programmer}
+
+
+\section{Éducation}
+\cventry{2004--2009}{Ingénieur en Informatique}{Institut National des Sciences Appliquées}{Lyon}{}{}
+
+\section{Compétences techniques}
+
+\cvitem{Java}{Spring/Spring Boot, JPA/Hibernate, Junit/DBUnit/Mockito}
+\cvitem{Concepts}{Architecture, Microservices, API REST}
+\cvitem{SGBD}{PostGreSql, MongoDB, Oracle, MySql, DB2}
+\cvitem{Outils}{Docker, Git/SVN, GitlabCI}
+
+
+\section{Langues}
+
+\cvitem{Français}{Langue maternelle}
+\cvitem{Anglais}{Courant}
+
+\section{Centres d'intérêt}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Vélo}{Voyage}
+\cvlistdoubleitem{Photographie}{Cinéma}
+\cvlistitem{Piano}
+
+\clearpage
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
